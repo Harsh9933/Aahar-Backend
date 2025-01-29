@@ -1,14 +1,17 @@
 import express from "express";
-import sequelize from "./config/database.config.ts";
+import sequelize from "./config/database.config.js";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import swaggerOptions from "./utils/swagger.ts";
+import swaggerOptions from "./utils/swagger.js";
 
 const app = express();
 
 app.use(express.json());
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.get("/",(req,res)=>{
+res.send({message:"hello world!"})
+})
 const PORT = 5000;
 
 (async () => {
