@@ -9,6 +9,9 @@ const app = express();
 app.use(express.json());
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.get("/",(req,res)=>{
+res.send({message:"hello world!"})
+})
 const PORT = 5000;
 
 (async () => {
