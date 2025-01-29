@@ -1,5 +1,5 @@
 import { Sequelize, DataTypes, Model } from "sequelize";
-import sequelize from "../config/database.config"; 
+import sequelize from "../config/database.config.js"; 
 
 class Vendor extends Model {
   public vendor_id!: number;
