@@ -1,6 +1,16 @@
-Certainly! Below is a `README.md` file that includes all the commands organized step-by-step for setting up and running your TypeScript project.
+# Database
 
-```markdown
+To run the database install docker and run the following command from the main directory
+
+```bash
+docker-compose up -d
+```
+now you can access the postgres database at
+```
+PORT = 5430
+password = root
+```
+
 # Aahar Backend
 
 This is a TypeScript backend project for the Aahar application, utilizing Express, Sequelize, and Swagger for API documentation.
