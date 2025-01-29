@@ -23,11 +23,11 @@ Order.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false,
+     allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+     allowNull: false,
       references: {
         model: User, 
         key: 'user_id',
@@ -35,7 +35,7 @@ Order.init(
     },
     vendor_id: {
       type: DataTypes.STRING(20),
-      allowNull: false,
+     allowNull: false,
       references: {
         model: Vendor, 
         key: 'vendor_id', 
@@ -43,36 +43,36 @@ Order.init(
     },
     delivery_partner_id: {
       type: DataTypes.STRING(20),
-      allowNull: false,
+     allowNull: false,
     },
     order_type: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+     allowNull: true,
     },
     quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+     allowNull: true,
     },
     price: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+     allowNull: true,
     },
     status: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+     allowNull: true,
     },
     delivery_address: {
       type: DataTypes.STRING(20),
-      allowNull: false,
+     allowNull: true,
     },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
     updated_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
   },
@@ -85,8 +85,8 @@ Order.init(
   }
 );
 
-// Defining associations in the `Order` model to `User` and `Vendor`
-Order.belongsTo(User, { foreignKey: "user_id", as: "user" });  // Linking the User model
-Order.belongsTo(Vendor, { foreignKey: "vendor_id", as: "vendor" });  // Linking the Vendor model
+
+Order.belongsTo(User, { foreignKey: "user_id", as: "user" });  
+Order.belongsTo(Vendor, { foreignKey: "vendor_id", as: "vendor" });  
 
 export default Order;

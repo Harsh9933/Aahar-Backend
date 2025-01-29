@@ -10,6 +10,7 @@ class Vendor extends Model {
   public closing_timing!: Date;
   public aadharcard_number!: number;
   public iffsai_image!: string;
+  public total_capacity!:number;
   public created_at!: Date;
   public updated_at!: Date;
 }
@@ -20,31 +21,35 @@ Vendor.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false,
+     allowNull: false,
     },
     owner_name: {
       type: DataTypes.STRING(30),
-      allowNull: false,
+     allowNull: true,
     },
     company_name: {
       type: DataTypes.STRING(30),
-      allowNull: false,
+      allowNull: true,
     },
     food_type: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+     allowNull: true,
     },
     opening_timing: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: true,
     },
     closing_timing: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: true,
     },
     aadharcard_number: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+     allowNull: true,
+    },
+    total_capacity:{
+      type: DataTypes.INTEGER,
+     allowNull: true,
     },
     iffsai_image: {
       type: DataTypes.TEXT, 
@@ -52,12 +57,12 @@ Vendor.init(
     },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
     updated_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
   },
