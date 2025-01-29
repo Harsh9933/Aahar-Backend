@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes, Model } from "sequelize";
-import sequelize from "../config/database.config"; 
-import User from "./user.entitie"; 
-import Vendor from "./vendor.entitie"; 
+import sequelize from "../config/database.config.js"; 
+import User from "./user.entitie.js"; 
+import Vendor from "./vendor.entitie.js"; 
 
 class Order extends Model {
   public order_id!: number;
