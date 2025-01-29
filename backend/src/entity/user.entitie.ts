@@ -20,27 +20,27 @@ User.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false,
+     allowNull: false,
     },
     user_name: {
       type: DataTypes.STRING(25),
-      allowNull: false,
+     allowNull: true,
     },
     first_name: {
       type: DataTypes.STRING(25),
-      allowNull: false,
+     allowNull: true,
     },
     last_name: {
       type: DataTypes.STRING(25),
-      allowNull: false,
+     allowNull: true,
     },
     email:{
       type: DataTypes.STRING(25),
-      allowNull: false,
+     allowNull: true,
     },
     address: {
       type: DataTypes.STRING(150),
-      allowNull: false,
+     allowNull: true,
     },
     phone: {
       type: DataTypes.INTEGER,
@@ -48,12 +48,12 @@ User.init(
     },
     created_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
     updated_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+     allowNull: false,
       defaultValue: DataTypes.NOW, 
     },
   },

@@ -14,7 +14,7 @@ class DeliveryPartner extends Model {
 
 DeliveryPartner.init(
   {
-    id: {
+    DP_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -22,23 +22,23 @@ DeliveryPartner.init(
     },
     user_name: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+      allowNull: true,
     },
     first_name: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+      allowNull: true,
     },
     last_name: {
       type: DataTypes.STRING(10),
-      allowNull: false,
+      allowNull: true,
     },
     driving_license: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     phone: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     created_at: {
       type: DataTypes.DATE,
